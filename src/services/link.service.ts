@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const urlApi = "http://localhost:3001/";
+const urlApi = "https://encurtadordelinksapi.onrender.com/";
 
 export interface CreateLinkPayload {
   url: string;

@@ -20,9 +20,9 @@ function App() {
       <div className="card">
         <LinkForm getLinkCreated={dataLink} onLinkCreated={setLink} />
         <p className="info-text">Encurte seus Links de Graça! 🔗</p>
+      <a className="read-the-docs" href="https://capy-com.vercel.app/">👉 Conheça mais sobre a Capycom!</a>
       </div>
 
-      <p className="read-the-docs">👉 Conheça mais sobre a Capycom!</p>
     </div>
   );
 }

@@ -6,9 +6,11 @@ import LinkForm from "./components/link-form";
 
 import "./styles/App.css";
 import Navbar from "./components/nav-bar";
+import LoadingSpinner from "./components/loading-spinner";
 
 function App() {
   const [dataLink, setLink] = useState<LinkResponse | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(false)
 
   return (
     <div className="app-container">
@@ -18,7 +20,10 @@ function App() {
       </h1>
 
       <div className="card">
-        <LinkForm getLinkCreated={dataLink} onLinkCreated={setLink} />
+        {isLoading ? <LoadingSpinner /> :<>
+          <LinkForm getLinkCreated={dataLink} onLinkCreated={setLink} setIsLoading={setIsLoading} />
+        </> 
+        }
         <p className="info-text">Encurte seus Links de Graça! 🔗</p>
       <a className="read-the-docs" href="https://capy-com.vercel.app/">👉 Conheça mais sobre a Capycom!</a>
       </div>

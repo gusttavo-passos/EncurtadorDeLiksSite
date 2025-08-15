@@ -1,4 +1,4 @@
-import { useState, type ChangeEvent } from "react";
+import { useState, type ChangeEvent, type Dispatch, type SetStateAction } from "react";
 import { FiCopy } from "react-icons/fi";
 
 import LinkService, { type LinkResponse } from "../services/link.service";
@@ -8,12 +8,13 @@ import "./styles/link-form.css"
 
 interface LinkFormProps {
   onLinkCreated: (link: LinkResponse) => void;
+  setIsLoading: Dispatch<SetStateAction<boolean>>
   getLinkCreated: LinkResponse | null
 }
 
 const linkService = new LinkService();
 
-export default function LinkForm({ onLinkCreated, getLinkCreated }: LinkFormProps) {
+export default function LinkForm({ onLinkCreated, getLinkCreated, setIsLoading }: LinkFormProps) {
   const [data, setData] = useState<UserEntity>({
     key: "key",
     link: ""
@@ -30,6 +31,7 @@ export default function LinkForm({ onLinkCreated, getLinkCreated }: LinkFormProp
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
+      setIsLoading(true)
       const newLink = await linkService.createLink({
         url: data.link,
         userId: data.key
@@ -37,6 +39,8 @@ export default function LinkForm({ onLinkCreated, getLinkCreated }: LinkFormProp
       onLinkCreated(newLink);
     } catch (err: any) {
       console.error(err.message);
+    } finally {
+      setIsLoading(false)
     }
   };
 

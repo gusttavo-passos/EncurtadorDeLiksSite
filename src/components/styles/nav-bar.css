@@ -1,0 +1,36 @@
+.navbar {
+  position: fixed;       /* fixa no topo */
+  top: 0;
+  left: 0;
+  width: 98vw;          /* ocupa toda a largura da tela */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #1f1f1f;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 1000;         /* garante que fique acima de outros elementos */
+}
+
+.navbar h2 {
+  color: #fff;
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.navbar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@media (prefers-color-scheme: light) {
+  .navbar {
+    background-color: #f9f9f9;
+  }
+
+  .navbar h2 {
+    color: #213547;
+  }
+}

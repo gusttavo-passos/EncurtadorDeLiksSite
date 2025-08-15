@@ -1,0 +1,108 @@
+.link-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.link-form label {
+  font-weight: 600;
+  text-align: left;
+}
+
+.link-form input {
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background-color: #2c2c2c;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.link-form input:focus {
+  border-color: #646cff;
+  outline: none;
+}
+
+.link-form button {
+  margin-top: 0.5rem;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #646cff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.link-form button:hover {
+  background-color: #535bf2;
+}
+
+.copy-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.copy-container input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background-color: #2c2c2c;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.copy-btn {
+  background-color: #646cff;
+  border: none;
+  padding: 0.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.copy-btn:hover {
+  background-color: #535bf2;
+}
+
+@media (prefers-color-scheme: light) {
+  .copy-container input {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+  }
+
+  .copy-btn {
+    background-color: #646cff;
+    color: #fff;
+  }
+
+  .copy-btn:hover {
+    background-color: #535bf2;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .link-form input {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #ccc;
+  }
+
+  .link-form button {
+    background-color: #646cff;
+    color: #fff;
+  }
+
+  .link-form button:hover {
+    background-color: #535bf2;
+  }
+}

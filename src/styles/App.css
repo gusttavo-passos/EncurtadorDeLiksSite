@@ -1,0 +1,89 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: center;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  padding: 2rem;
+}
+
+.app-container {
+  max-width: 99vw;
+  width: 100%;
+  text-align: center;
+  padding-top: 100px; /* distância da navbar fixa */
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 3rem;
+  color: #ffffff;
+}
+
+.card {
+  background-color: #1f1f1f;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.result {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.result input {
+  background-color: #333;
+  border: 1px solid #555;
+  color: #fff;
+  cursor: not-allowed;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+}
+
+.info-text {
+  margin-top: 1rem;
+  color: #aaa;
+  font-weight: 500;
+}
+
+.read-the-docs {
+  margin-top: 1.5rem;
+  font-weight: 500;
+  color: #646cff;
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  .card {
+    background-color: #f9f9f9;
+  }
+
+  .result input {
+    background-color: #eee;
+    color: #333;
+    border: 1px solid #ccc;
+  }
+
+  .read-the-docs {
+    color: #535bf2;
+  }
+}
